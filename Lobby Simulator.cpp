@@ -73,7 +73,7 @@ void LOBBY::RemovePlayer(const string& name)
     }
     else
     {
-        cout << "No player " << name << endl;
+        cout << "No player found" << name << endl;
     }
 }
 
