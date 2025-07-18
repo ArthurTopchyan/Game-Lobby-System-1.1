@@ -1,5 +1,5 @@
 // Lobby Simulator.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Follow the instructions from readme
 
 #include <iostream>
 #include <iostream>
@@ -50,7 +50,7 @@ public:
     void PrintPlayers() const;
 
     //protected:
-    //    int Player_Storage = 0;
+    //    int Player_Storage = 0; you can remove slashes from the protected and experement with it
 
 private:
     set<Player> _players;
