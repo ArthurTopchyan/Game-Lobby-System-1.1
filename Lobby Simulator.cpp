@@ -145,6 +145,9 @@ int main()
         else
         {
             cout << "Error 404 unknown operation\n";
+            this_thread::sleep_for(chrono::seconds(3));
+            system("cls");//wait 3 seconds and clear the screen
+            continue;
         }
     }
 }
