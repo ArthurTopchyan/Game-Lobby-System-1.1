@@ -48,9 +48,9 @@ public:
     void RemovePlayer(const string& name);
     int  PlayersCount();
     void PrintPlayers() const;
-
+    void LobbyClear();
     //protected:
-    //    int Player_Storage = 0; you can remove slashes from the protected and experement with it
+    //    int Player_Storage = 0;
 
 private:
     set<Player> _players;
@@ -91,6 +91,10 @@ void LOBBY::PrintPlayers() const
     }
 }
 
+void LOBBY::LobbyClear()
+{
+    _players.clear();
+}
 
 int main()
 {
@@ -103,6 +107,7 @@ int main()
         cout << "Enter '2' if you want to remove player\n\n";
         cout << "Enter '3' if you want to count players\n\n";
         cout << "Enter '4' if you want to see all players\n\n";
+        cout << "Enter '5' if you want to clear all players\n\n";
         cin >> t;
         if (t == 1)
         {
@@ -142,11 +147,16 @@ int main()
             system("cls");
             lobby.PrintPlayers();
         }
+        else if (t == 5)
+        {
+            lobby.LobbyClear();
+            system("cls");
+        }
         else
         {
             cout << "Error 404 unknown operation\n";
             this_thread::sleep_for(chrono::seconds(3));
-            system("cls");//wait 3 seconds and clear the screen
+            system("cls");
             continue;
         }
     }
